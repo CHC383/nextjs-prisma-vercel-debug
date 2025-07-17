@@ -44,6 +44,9 @@ following changes:
   # Start the PostgreSQL container
   pnpm run-db
 
+  # Migrate the database
+  pnpm migrate-db
+
   # Seed the database with prisma/seed.ts
   pnpm seed-db
 
