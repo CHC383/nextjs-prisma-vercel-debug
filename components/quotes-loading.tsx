@@ -19,12 +19,12 @@ export function QuotesLoading() {
               className="p-6 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800"
             >
               <div className="space-y-3">
-                <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded animate-pulse"></div>
-                <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded animate-pulse w-3/4"></div>
-                <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded animate-pulse w-1/2"></div>
+                <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded-sm animate-pulse"></div>
+                <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded-sm animate-pulse w-3/4"></div>
+                <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded-sm animate-pulse w-1/2"></div>
                 <div className="flex justify-between items-center pt-2">
                   <div className="h-6 bg-slate-200 dark:bg-slate-700 rounded-full w-16 animate-pulse"></div>
-                  <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded w-8 animate-pulse"></div>
+                  <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded-sm w-8 animate-pulse"></div>
                 </div>
               </div>
             </div>
@@ -46,12 +46,12 @@ export function QuotesLoading() {
               className="p-6 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800"
             >
               <div className="space-y-3">
-                <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded animate-pulse"></div>
-                <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded animate-pulse w-4/5"></div>
-                <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded animate-pulse w-2/3"></div>
+                <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded-sm animate-pulse"></div>
+                <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded-sm animate-pulse w-4/5"></div>
+                <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded-sm animate-pulse w-2/3"></div>
                 <div className="flex justify-between items-center pt-2">
                   <div className="h-6 bg-slate-200 dark:bg-slate-700 rounded-full w-12 animate-pulse"></div>
-                  <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded w-8 animate-pulse"></div>
+                  <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded-sm w-8 animate-pulse"></div>
                 </div>
               </div>
             </div>

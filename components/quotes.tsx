@@ -43,7 +43,7 @@ export async function Quotes() {
           {opinions.map((quote) => (
             <div
               key={quote.id}
-              className="group p-6 rounded-xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
+              className="group p-6 rounded-xl border border-blue-200 dark:border-blue-800 bg-linear-to-br from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
             >
               <div className="flex items-start gap-3">
                 <span className="text-blue-500 dark:text-blue-400 text-2xl shrink-0">
@@ -83,7 +83,7 @@ export async function Quotes() {
           {facts.map((quote) => (
             <div
               key={quote.id}
-              className="group p-6 rounded-xl border border-green-200 dark:border-green-800 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
+              className="group p-6 rounded-xl border border-green-200 dark:border-green-800 bg-linear-to-br from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 hover:shadow-lg transition-all duration-200 hover:scale-[1.02]"
             >
               <div className="flex items-start gap-3">
                 <span className="text-green-500 dark:text-green-400 text-2xl shrink-0">

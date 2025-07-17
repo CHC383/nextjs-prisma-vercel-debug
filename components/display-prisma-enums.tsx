@@ -13,7 +13,7 @@ export function DisplayPrismaEnums() {
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-      <div className="border-4 border-dashed border-red-400 bg-yellow-50 dark:bg-yellow-900/30 rounded-lg p-4 text-xs text-yellow-800 dark:text-yellow-200 shadow-sm">
+      <div className="border-4 border-dashed border-red-400 bg-yellow-50 dark:bg-yellow-900/30 rounded-lg p-4 text-xs text-yellow-800 dark:text-yellow-200 shadow-xs">
         <div className="mb-2 font-semibold text-center">
           Debug Info: Prisma Enums (Client Side)
         </div>
