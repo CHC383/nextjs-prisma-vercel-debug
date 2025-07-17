@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
-import { QuoteKind } from '@/lib/generated/prisma/enums'
-import { useState, useEffect } from 'react'
+import { QuoteKind } from "@/lib/generated/prisma/enums";
+import { useState, useEffect } from "react";
 
 export function DisplayPrismaEnums() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     // Note: this avoid "Hydration failed" errors in Next.js
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   return (
     <div className="w-full max-w-2xl mx-auto">
@@ -18,8 +18,8 @@ export function DisplayPrismaEnums() {
           Debug Info: Prisma Enums (Client Side)
         </div>
         <div className="mb-1 text-center">
-          Rendered on client?{' '}
-          <span className="font-mono">{mounted ? 'Yes' : 'No'}</span>
+          Rendered on client?{" "}
+          <span className="font-mono">{mounted ? "Yes" : "No"}</span>
         </div>
         <div className="mb-2 text-center">
           <span className="font-semibold">
@@ -28,5 +28,5 @@ export function DisplayPrismaEnums() {
         </div>
       </div>
     </div>
-  )
+  );
 }

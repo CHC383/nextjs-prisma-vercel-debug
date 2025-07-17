@@ -3,8 +3,8 @@
 
 // See: https://www.prisma.io/docs/orm/prisma-schema/overview/generators#field-reference-1
 generator client {
-  provider = "prisma-client"
-  output = "../lib/generated/prisma"
+  provider        = "prisma-client"
+  output          = "../lib/generated/prisma"
   previewFeatures = ["driverAdapters", "queryCompiler"]
 }
 
@@ -20,8 +20,8 @@ enum QuoteKind {
 }
 
 model Quotes {
-  id        Int      @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   quote     String
   kind      QuoteKind @default(Opinion)
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
 }

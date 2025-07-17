@@ -1,25 +1,29 @@
-import prisma from '@/lib/db'
-import { QuoteKind } from '@/lib/prisma-enums'
+import { connection } from "next/server";
+
+import prisma from "@/lib/db";
+import { QuoteKind } from "@/lib/prisma-enums";
 
 // Disable caching. If 'force-dynamic' is not used, stale data can be returned from Prisma Client.
 // Learn more here: https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dynamic.
-export const dynamic = 'force-dynamic'
+export const dynamic = "force-dynamic";
 
 export async function Quotes() {
+  await connection();
+
   const quotes = await prisma.quotes.findMany({
     orderBy: {
-      createdAt: 'desc',
+      createdAt: "desc",
     },
-  })
+  });
 
-  const opinions = quotes.filter((quote) => quote.kind === QuoteKind.Opinion)
-  const facts = quotes.filter((quote) => quote.kind === QuoteKind.Fact)
+  const opinions = quotes.filter((quote) => quote.kind === QuoteKind.Opinion);
+  const facts = quotes.filter((quote) => quote.kind === QuoteKind.Fact);
 
   return (
     <div className="w-full max-w-6xl mx-auto space-y-12">
       <div className="text-center mb-8">
         <p className="text-lg text-slate-600 dark:text-slate-300">
-          Found {quotes.length} quotes total • {opinions.length} opinions •{' '}
+          Found {quotes.length} quotes total • {opinions.length} opinions •{" "}
           {facts.length} facts
         </p>
       </div>
@@ -104,5 +108,5 @@ export async function Quotes() {
         </div>
       </section>
     </div>
-  )
+  );
 }

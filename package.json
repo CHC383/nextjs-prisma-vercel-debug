@@ -1,47 +1,38 @@
 {
-  "name": "generator-prisma-client-nextjs-starter-webpack",
+  "name": "nextjs-prisma-vercel-debug",
   "type": "module",
   "version": "0.1.0",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/prisma/prisma-examples.git",
-    "directory": "generator-prisma-client/nextjs-starter-webpack"
-  },
-  "keywords": [
-    "prisma",
-    "postgres",
-    "nextjs",
-    "esm",
-    "prisma-client",
-    "typescript"
-  ],
-  "author": "Alberto Schiabel <schiabel@prisma.io>",
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "next build",
+    "migrate-db": "prisma migrate dev",
+    "postinstall": "prisma generate",
+    "run-db": "docker compose pull && docker compose up --detach --remove-orphans --wait",
+    "seed-db": "prisma db seed",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@prisma/adapter-pg": "6.12.0",
     "@prisma/client": "6.12.0",
-    "@t3-oss/env-core": "0.13.8",
-    "next": "15.3.3",
+    "@t3-oss/env-nextjs": "0.13.8",
+    "next": "15.4.1",
     "postcss": "8.5.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hot-toast": "2.5.2",
     "tailwindcss": "3.4.17",
-    "zod": "3.25.71"
+    "zod": "4.0.5"
   },
   "devDependencies": {
-    "@types/node": "22.15.32",
+    "@eslint/eslintrc": "^3.3.1",
+    "@types/node": "22.16.4",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "autoprefixer": "10.4.21",
-    "eslint": "8.57.1",
-    "eslint-config-next": "15.3.3",
+    "eslint": "9.31.0",
+    "eslint-config-next": "15.4.1",
     "prisma": "6.12.0",
     "tsx": "4.20.3",
     "typescript": "5.8.3"
@@ -50,5 +41,5 @@
     "seed": "tsx prisma/seed.ts"
   },
   "license": "MIT",
-  "packageManager": "pnpm@8.15.9+sha512.499434c9d8fdd1a2794ebf4552b3b25c0a633abcee5bb15e7b5de90f32f47b513aca98cd5cfd001c31f0db454bc3804edccd578501e4ca293a6816166bbd9f81"
+  "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad"
 }

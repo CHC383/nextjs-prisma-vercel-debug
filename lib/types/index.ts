@@ -1,9 +1,9 @@
 export type Quote = {
-  id: number
-  quote: string
-  createdAt: string
-}
+  id: number;
+  quote: string;
+  createdAt: string;
+};
 
 export type QuoteResult = {
-  data: Quote
-}
+  data: Quote;
+};

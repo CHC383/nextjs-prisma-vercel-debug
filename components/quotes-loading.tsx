@@ -59,5 +59,5 @@ export function QuotesLoading() {
         </div>
       </section>
     </div>
-  )
+  );
 }
